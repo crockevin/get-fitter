@@ -1,12 +1,83 @@
-    <div class="login-container">
-      <h2>Login</h2>
-      <form id="login-form">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required />
+<div class="topInfo">
+  <div class="container">
+    <h1 class="is-size-3">Welcome to the website</h1>
+    <p class="is-size-3">Please follow the prompt to get access to the website</p>
+  </div>
+</div>
 
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required />
+<div class="container">
+  <div class="columns">
+    <div class="column is-half">
+      <form action="/" method="post" role="form">
+        <div class="field">
+          <label class="label" id="first_name">First Name</label>
+          <div class="control">
+            <input
+              class="input"
+              type="text"
+              name="first_name"
+              id="first_name"
+              placeholder="First Name"
+            />
+          </div>
+        </div>
 
-        <button type="submit">Login</button>
+        <div class="field">
+          <label class="label" id="last_name">Last Name</label>
+          <div class="control">
+            <input
+              class="input"
+              type="text"
+              name="last_name"
+              id="last_name"
+              placeholder="Last Name"
+            />
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label" id="email">Email Address</label>
+          <div class="control">
+            <input
+              class="input"
+              type="text"
+              name="email"
+              id="email"
+              placeholder="Email Address"
+            />
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label" id="password">Password</label>
+          <div class="control">
+            <input
+              class="input"
+              type="password"
+              name="password"
+              id="password"
+            />
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label" id="confirm_password">Confirm Password</label>
+          <div class="control">
+            <input
+              class="input"
+              type="password"
+              name="confirm_password"
+              id="confirm_password"
+            />
+          </div>
+        </div>
+
+        <div class="field">
+          <div class="control">
+            <button type="submit" class="button is-primary">Submit</button>
+          </div>
+        </div>
       </form>
     </div>
+  </div>
+</div>
