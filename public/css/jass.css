@@ -1,5 +1,5 @@
 .background-container {
-  background-image: url('/img/circuit-training.webp');
+  background-image: url('/css/img/circuit-training.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -7,4 +7,19 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.container{
+  background-color: white;
+  opacity: .7;
+  margin-top: .9px;
+  text-align: center;
+  border-radius: 44.3px;
+}
+
+.login-cards{
+  background-color: ghostwhite;
+  opacity: .7;
+  margin-top: .9px;
+  text-align: center;
+  border-radius: 44.3px;
 }
