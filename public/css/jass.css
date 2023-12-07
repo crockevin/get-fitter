@@ -1,20 +1,10 @@
-/* style.css */
-body {
-    font-family: Arial, sans-serif;
-}
-
-header {
-    background-color: #333;
-    color: white;
-    padding: 10px;
-}
-
-nav a {
-    color: white;
-    margin-right: 10px;
-    text-decoration: none;
-}
-
-#content {
-    padding: 20px;
+.background-container {
+  background-image: url('/img/circuit-training.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
