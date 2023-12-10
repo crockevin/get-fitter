@@ -8,7 +8,7 @@
   justify-content: center;
   align-items: center;
 }
-.container{
+.container, .login-cards{
   background-color: white;
   opacity: .7;
   margin-top: .9px;
@@ -16,10 +16,3 @@
   border-radius: 44.3px;
 }
 
-.login-cards{
-  background-color: ghostwhite;
-  opacity: .7;
-  margin-top: .9px;
-  text-align: center;
-  border-radius: 44.3px;
-}
