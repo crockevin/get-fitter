@@ -42,7 +42,7 @@ router.get('/profile/:id', withAuth, async (req, res) => {
     try {
         const user = await User.findByPk(req.params.id)
         if (!user) {
-            return res.status(404).json('user not found')
+            return res.status(404).redirect('/')
         }
         const sameUser = user.id == req.session.user_id
         const imageExists = await doesItExists(path.resolve(__dirname, '..', 'uploads', `profile-${user.id}.jpg`))
@@ -68,21 +68,5 @@ async function doesItExists(path) {
         return false
     }
 }
-
-router.get('/login', (req, res) => {
-    res.render('login');
-})
-
-router.get('/signup', (req, res) => {
-    res.render('signup');
-})
-
-router.get('/landing', (req, res) => {
-    res.render('landing');
-})
-router.get('/profile', (req, res) => {
-    res.render('profile');
-})
-
 
 module.exports = router
