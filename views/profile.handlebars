@@ -1,7 +1,6 @@
 <link rel="stylesheet" href="/css/profile.css">
 
 <div class="container">
-    <!-- First Section -->
     <div class="section" id="profileSection">
         <img class="profile-image" src="{{ profileImage }}" alt="Profile Image">
         <p class="name">{{firstName}}, {{lastName}}</p>
@@ -13,8 +12,6 @@
         </form>
 
     </div>
-
-    <!-- Second Section -->
     {{#if sameUser}}
     <div class="section" id="dropdownSection">
         <select class="dropdown" id="dropdown">
@@ -35,8 +32,6 @@
         </div>
     </div>
     {{/if}}
-
-    <!-- Third Section -->
     <div class="section middle-column" id="listSection">
         <p>Saved exercises</p>
         <ul id="workoutList">

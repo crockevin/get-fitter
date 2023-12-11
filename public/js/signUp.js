@@ -1,5 +1,3 @@
-
-
 const signup = async (e) => {
     e.preventDefault()
     const firstName = document.querySelector('#first_name').value.trim()

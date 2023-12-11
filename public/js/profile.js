@@ -35,8 +35,6 @@ document.getElementById('dropdown').addEventListener('change', function () {
             data.forEach(exercise => {
                 const li = document.createElement('li');
                 li.innerHTML = `<img src="${exercise.gifUrl}" alt="Exercise Gif"><p>${exercise.name}</p>`;
-
-                // Add a click event listener to each li
                 li.addEventListener('click', () => savedClick(exercise));
 
                 exerciseList.appendChild(li);
@@ -44,7 +42,6 @@ document.getElementById('dropdown').addEventListener('change', function () {
         })
         .catch(error => console.error('Error fetching exercises:', error));
 
-    // Function to handle the click event on li elements
     function savedClick(clickedExercise) {
         fetch(`/api/workouts`, {
             method: 'POST',
@@ -65,14 +62,12 @@ document.getElementById('dropdown').addEventListener('change', function () {
             .then(response => response.json())
             .then(data => {
                 console.log('Workout created:', data);
-
-                // Fetch and display all workouts for the specific user in the third section
                 savedWorkouts(userId);
             })
             .catch(error => console.error('Error creating workout:', error));
     }
 })
-// Function to fetch and display all workouts for a specific user
+
 function savedWorkouts(userId) {
     fetch(`/api/workouts/${userId}`)
         .then(response => response.json())
