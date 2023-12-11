@@ -1,0 +1,52 @@
+<link rel="stylesheet" href="/css/profile.css">
+
+<div class="container">
+    <!-- First Section -->
+    <div class="section" id="profileSection">
+        <img class="profile-image" src="{{ profileImage }}" alt="Profile Image">
+        <p class="name">{{firstName}}, {{lastName}}</p>
+        <br>
+        <form id="uploadForm" enctype="multipart/form-data" action="/upload" method="post">
+            <input type="file" name="profilePicture" accept="image/*" required>
+            <input type="hidden" name="userId" value="{{ userData.userId }}">
+            <button type="submit">Upload</button>
+        </form>
+
+    </div>
+
+    <!-- Second Section -->
+    {{#if sameUser}}
+    <div class="section" id="dropdownSection">
+        <select class="dropdown" id="dropdown">
+            <option value="waist">Waist</option>
+            <option value="upperLegs">Upper Legs</option>
+            <option value="upperArms">Upper Arms</option>
+            <option value="shoulder">Shoulder</option>
+            <option value="neck">Neck</option>
+            <option value="lowerLegs">Lower Legs</option>
+            <option value="lowerArms">Lower Arms</option>
+            <option value="chest">Chest</option>
+            <option value="back">Back</option>
+            <option value="cardio">Cardio</option>
+        </select>
+        <div class="middle-column">
+            <ul id="exerciseList">
+            </ul>
+        </div>
+    </div>
+    {{/if}}
+
+    <!-- Third Section -->
+    <div class="section middle-column" id="listSection">
+        <p>Saved exercises</p>
+        <ul id="workoutList">
+        </ul>
+    </div>
+</div>
+<script> const userId = {{ profile_id }};
+</script>
+{{#if sameUser}}
+<script src="/js/profile.js"></script>
+{{else}}
+<script src="/js/notUserProfile.js"></script>
+{{/if}}
