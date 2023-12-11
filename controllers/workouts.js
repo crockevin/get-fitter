@@ -8,9 +8,6 @@ router.get('/', (req, res) => {
     res.render('landing', { logged_in: req.session.logged_in })
 
 })
-router.get('/test', (req, res) => {
-    res.render('test')
-})
 
 router.get('/login', (req, res) => {
     if (req.session.logged_in) {
