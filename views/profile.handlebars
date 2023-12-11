@@ -1,73 +1,47 @@
-<div class="container is-fluid">
-  <div class="columns">
-    <!-- Left column for card section -->
-    <div class="column is-one-third">
-      <h4 class="profile">Account settings</h4>
-      <div class="card section">
-        <!-- ... (rest of your HTML) ... -->
-        <div class="tab-content">
-          <div id="account-info">
-            <div class="">
-              <img class="is-rounded" src="http://placehold.it/300x225" alt />
-              <p class="Name">Name Test</p>
-              <div class="media-body">
-                <label class="btn btn-primary">
-                  Upload new photo
-                  <input type="file" class="account-settings-fileInput" />
-                </label>
-                <button type="button" class="button is-link">Reset</button>
-                <div class="section">
-                    <div>
-                        <label class="field"></label>
-                        <div></div>
-                        <textarea class="textarea" id="project-dec" name="project-desc"></textarea>
-                    </div>
-                </div>
-                 <div class="section">
-                    <div>
-                        <label class="field"></label>
-                        <div></div>
-                        <textarea class="textarea" id="project-dec" name="project-desc"></textarea>
-                    </div>
-                </div>
-                 <div class="section">
-                    <div>
-                        <label class="field"></label>
-                        <div></div>
-                        <textarea class="textarea" id="project-dec" name="project-desc"></textarea>
-                    </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <!-- Right column for search-section -->
-    <div class="column">
-      <div class="section search-section">
-      </div>
-      <div class="search-container">
-        <input type="text" class="search-input" id="searchInput" placeholder="Search...">
-        <button class="search-button" onclick="search()">Search</button>
-      </div>
+<link rel="stylesheet" href="/css/profile.css">
 
-      <div class="history-container">
-        <h3>Search History</h3>
-        <ul id="historyList"></ul>
-      </div>
+<div class="container">
+    <div class="section" id="profileSection">
+        <img class="profile-image" src="{{ profileImage }}" alt="Profile Image">
+        <p class="name">{{firstName}}, {{lastName}}</p>
+        <br>
+        <form id="uploadForm" enctype="multipart/form-data" action="/upload" method="post">
+            <input type="file" name="profilePicture" accept="image/*" required>
+            <input type="hidden" name="userId" value="{{ userData.userId }}">
+            <button type="submit">Upload</button>
+        </form>
+
     </div>
-       <div class="column">
-       <div class="column">
-      <div class="section search-section">
-        <h3>Search Results</h3>
-        <ul id="searchResults">
-          <li>Result 1</li>
-          <li>Result 2</li>
+    {{#if sameUser}}
+    <div class="section" id="dropdownSection">
+        <select class="dropdown" id="dropdown">
+            <option value="waist">Waist</option>
+            <option value="upperLegs">Upper Legs</option>
+            <option value="upperArms">Upper Arms</option>
+            <option value="shoulder">Shoulder</option>
+            <option value="neck">Neck</option>
+            <option value="lowerLegs">Lower Legs</option>
+            <option value="lowerArms">Lower Arms</option>
+            <option value="chest">Chest</option>
+            <option value="back">Back</option>
+            <option value="cardio">Cardio</option>
+        </select>
+        <div class="middle-column">
+            <ul id="exerciseList">
+            </ul>
+        </div>
+    </div>
+    {{/if}}
+    <div class="section middle-column" id="listSection">
+        <p>Saved exercises</p>
+        <ul id="workoutList">
         </ul>
-      </div>
     </div>
-    </div>
-  </div>
 </div>
+<script> const userId = {{ profile_id }};
+</script>
+{{#if sameUser}}
+<script src="/js/profile.js"></script>
+{{else}}
+<script src="/js/notUserProfile.js"></script>
+{{/if}}
