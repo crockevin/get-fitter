@@ -6,6 +6,7 @@ const path = require('path')
 
 router.get('/', (req, res) => {
     res.render('landing', { logged_in: req.session.logged_in })
+
 })
 router.get('/test', (req, res) => {
     res.render('test')
@@ -67,5 +68,21 @@ async function doesItExists(path) {
         return false
     }
 }
+
+router.get('/login', (req, res) => {
+    res.render('login');
+})
+
+router.get('/signup', (req, res) => {
+    res.render('signup');
+})
+
+router.get('/landing', (req, res) => {
+    res.render('landing');
+})
+router.get('/profile', (req, res) => {
+    res.render('profile');
+})
+
 
 module.exports = router

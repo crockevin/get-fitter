@@ -1,35 +1,47 @@
- <div class="column is-one-third is-offset-one-quarter login-card">
-    <h2 class="title is-2">Signup</h2>
-    <form class="form signup-form">
-      <div class="field">
-        <label class="label" for="first_name">First name:</label>
-        <div class="control">
-          <input class="input" type="text" id="first_name" />
-        </div>
-      </div>
-      <div class="field">
-        <label class="label" for="last_name">Last name:</label>
-        <div class="control">
-          <input class="input" type="text" id="last_name" />
-        </div>
-      </div>
-      <div class="field">
-        <label class="label" for="email-signup">Email:</label>
-        <div class="control">
-          <input class="input" type="text" id="email" />
-        </div>
-      </div>
-      <div class="field">
-        <label class="label" for="password-signup">Password:</label>
-        <div class="control">
-          <input class="input" type="password" id="password" />
-        </div>
-      </div>
-      <div class="field">
-        <div class="control">
+<div class="topInfo">
+  <div class="container">
+    <h1 class="is-size-3 has-text-black has-text-weight-bold">Welcome to the website</h1>
+    <p class="is-size-3 has-text-black has-text-weight-bold">JUST DO IT</p>
+    <div class="container">
+      <div class="column is-offset-one-quarter is-half">
+        <form action="/" method="post" role="form">
+          <div class="field">
+            <label class="label has-text-black has-text-weight-bold" for="first_name">First Name</label>
+            <div class="control">
+              <input class="input" type="text" name="first_name" id="first_name" placeholder="First Name" />
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label has-text-black has-text-weight-bold" for="last_name">Last Name</label>
+            <div class="control">
+              <input class="input" type="text" name="last_name" id="last_name" placeholder="Last Name" />
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label has-text-black has-text-weight-bold" for="email">Email Address</label>
+            <div class="control">
+              <input class="input" type="text" name="email" id="email" placeholder="Email Address" />
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label has-text-black has-text-weight-bold" for="password">Password</label>
+            <div class="control">
+              <input class="input" type="password" name="password" id="password" />
+            </div>
+          </div>
+
+          <div class="field">
+            <div class="control">
           <button class="button is-primary"  id="signUpButton" type="submit">Signup</button>
         </div>
+          </div>
+        </form>
       </div>
-    </form>
+    </div>
   </div>
-  <script src="./js/signUp.js"></script>
+</div>
+  <script src="./js/signUp.js"></script
+
