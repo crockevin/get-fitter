@@ -1,10 +1,11 @@
 const router = require('express').Router()
 const { Workout, User } = require('../../models')
+const { v4: uuidv4 } = require('uuid')
 
 router.post('/', async (req, res) => {
     try {
         console.log('Request Body:', req.body)
-        const { userId, bodyPart, equipment, gifUrl, id, name, target, secondaryMuscles, instructions } = req.body
+        const { userId, bodyPart, equipment, gifUrl, id, name, target, secondaryMuscles} = req.body
 
         const userData = await User.findByPk(userId)
         if (!userData) {
@@ -19,8 +20,7 @@ router.post('/', async (req, res) => {
             id,
             name,
             target,
-            secondaryMuscles,
-            instructions
+            secondaryMuscles
         })
         res.status(200).json(workout)
     } catch (error) {
