@@ -43,7 +43,7 @@ router.get('/profile/:id', withAuth, async (req, res) => {
         }
         const sameUser = user.id == req.session.user_id
         const imageExists = await doesItExists(path.resolve(__dirname, '..', 'uploads', `profile-${user.id}.jpg`))
-        const profileImage = imageExists ? `../uploads/profile-1.jpg` : '../uploads/placeholder.jpg'
+        const profileImage = imageExists ? `../uploads/profile-${user.id}.jpg` : '../uploads/placeholder.jpg'
         res.render('profile', {
             profile_id: user.id,
             sameUser,
