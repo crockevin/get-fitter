@@ -44,6 +44,6 @@ Zeusjr101, lewiscornelius
 
   crochedengren@gmail.com
 
-## Deployed 
+## Deploy 
 
   https://get-fitter-e98ef4b65ec3.herokuapp.com/
