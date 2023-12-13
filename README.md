@@ -15,7 +15,7 @@
 
 [Question](#question)
 
-[Deploy](deploy)
+[Deploy](#deploy)
 
 
 ## Description
