@@ -30,7 +30,7 @@
     MIT, https://opensource.org/licenses/MIT
 ## Testing
 
-  open the url, sing up and choose from a list of options
+  open the url, sign up and choose from a list of options
 
 ## Colab 
 
